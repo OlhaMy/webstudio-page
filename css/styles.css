@@ -20,13 +20,13 @@ header {
     color: #2e2f42;
 }
 
+.web{
+    color: #4d5ae5;
+}
+
  .logo:hover,
  .logo:focus{
     color: #404BBF;
-}
-
-.web{
-    color: #4d5ae5;
 }
 
 header > ul .title {
@@ -78,6 +78,11 @@ header > ul .title {
     background: #4d5ae5;
 }
 
+.part_2 {
+    width: 1128px;
+    height: 104px;
+}
+
 .part_2 > h2 {
     visibility: hidden;
 }
@@ -96,4 +101,55 @@ header > ul .title {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+}
+
+.part_3 {
+    background-color: #E7E9FC;
+    width: 1440px;
+    height: 732px;
+}
+
+.part_3 .team > h2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+}
+.part_3 .team > p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #434455;
+}
+
+.part_4 {
+    width: 1128px;
+    height: 1000px; 
+}
+
+.part_4 .portfolio > h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+}
+.part_4 .portfolio > p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
+footer > p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
 }
