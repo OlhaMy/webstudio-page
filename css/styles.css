@@ -1,7 +1,68 @@
+
 body {
     font-family: "Roboto", sans-serif;
     background-color: #FFFFFF;
     color: #434455;
+   
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+.container {
+    margin: 0;
+    max-width: 1158px;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ a {
+    text-decoration: none;
+ }
+
+img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+header {
+    display: flex;
+    border-bottom: 1px solid #e7e9fc;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .logo {
+    justify-content: flex-start;
+    padding: 27px 0;
+}
+
+.container .title {
+    gap: 40;
+    padding: 27px 0;
+}
+
+.container .contacts {
+    justify-content: flex-end;
+    gap: 40;
+    padding: 27px 0;
 }
 
 .logo {
@@ -50,6 +111,49 @@ body {
 .contacts .link:focus{
     color: #404BBF;
 }
+
+main{
+    flex-grow: 1;
+}
+
+.section {
+    margin: 0;
+    padding: 120px 0 120px;
+}
+
+.section .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 48px;
+}
+.container .your_busines {
+    display: flex;
+    padding: 188px 472px;
+}
+
+.container .order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 4px;
+    padding: 16px 32px;
+}
+
+
+
+footer{
+
+}
+
+
+
+
+
+
 
 .hero {
     background-color: #2E2F42;
