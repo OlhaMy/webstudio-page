@@ -12,13 +12,6 @@ body {
 }
 
 
-.container {
-    margin: 0;
-    max-width: 1158px;
-    justify-content: center;
-    align-items: center;
-}
-
 h1,
 h2,
 h3,
@@ -42,28 +35,35 @@ img {
 }
 /*_____________________________________________________Header___________________________________________________________________*/
 
+.header {
+    border-bottom: 1px solid #e7e9fc;
+}
 .header .container {
     display: flex;
-    border-bottom: 1px solid #e7e9fc;
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
+
+.container {
+    margin: 0;
+    max-width: 1158px;
+    padding: 0 15px;
+}
+
 .container .navigation {
     display: flex;
-    flex-direction: row;
+    align-items: center;
 
 }
-.container .title {
-    gap: 40;
-    padding: 27px 0;
+.navigation .title {
+    display: flex;
+    gap: 40px;
+    padding: 24px 0;
 }
 
-.container .contacts {
-    gap: 40;
-    padding: 27px 0;
+.title > li :not(:last-child){
+    margin-right: 40px;
 }
 
-.logo {
+.navigation .logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -71,6 +71,26 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
+
+    margin-right: 76px;
+}
+.container .contacts {
+    display: flex;
+    align-items: center;
+}
+    
+.contacts .our_contacts {
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    padding: 24px 0;
+    gap: 40px;
+}
+    
+.our_contacts > li :not(:last-child) {
+    margin-right: 40px;
 }
 
 .studio {
@@ -95,18 +115,13 @@ img {
     color: #404bbf;
 }
 
-.contacts{
-    font-weight: 500;
-    font-style: normal;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-}
-.contacts .link {
+
+.our_contacts .link {
     color: #434455;
 }
 
-.contacts .link:hover,
-.contacts .link:focus{
+.our_contacts .link:hover,
+.our_contacts .link:focus{
     color: #404BBF;
 }
 
@@ -117,6 +132,7 @@ main{
 
 .section_hero .container{
     display: block;
+    padding: 188px 0;
     margin: 0 0 96px 0;
 
     align-items: center;
@@ -124,25 +140,22 @@ main{
     color: #fff;
 }
 .container .your_busines {
+    justify-content: center;
+    max-width: 496px;
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
     text-align: center;
     color: #fff;
-
-
-    padding: 188px 236px;
-}
-
-.container > button {
-    text-align: center;
-    align-items: center;
-    margin: 0;
-    padding-bottom: 188px;
 }
 
 .container .order {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none; 
+
     background: #4d5ae5;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
