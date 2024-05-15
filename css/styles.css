@@ -16,6 +16,7 @@ body {
 .container {
     margin: 0;
     max-width: 1158px;
+    align-items: center;
 }
 
 h1,
@@ -39,28 +40,25 @@ img {
     max-width: 100%;
     margin-bottom: 0;
 }
+/*_____________________________________________________Header___________________________________________________________________*/
 
-header {
+.header .container {
     display: flex;
     border-bottom: 1px solid #e7e9fc;
     padding-top: 24px;
     padding-bottom: 24px;
-    justify-content: space-between;
-    align-items: center;
 }
+.container .navigation {
+    display: flex;
+    flex-direction: row;
 
-.container .logo {
-    justify-content: flex-start;
-    padding: 27px 0;
 }
-
 .container .title {
     gap: 40;
     padding: 27px 0;
 }
 
 .container .contacts {
-    justify-content: flex-end;
     gap: 40;
     padding: 27px 0;
 }
@@ -115,72 +113,80 @@ header {
 main{
     flex-grow: 1;
 }
+/*_________________________________________________first Section__________________________________________________________________*/
 
-.section {
-    margin: 0;
-    padding: 120px 0 120px;
-}
+.section_hero .container{
+    display: block;
+    margin: 0 0 96px 0;
 
-.section .container {
-    display: flex;
     align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 48px;
-}
-.container .your_busines {
-    display: flex;
-    padding: 188px 472px;
-}
-
-.container .order {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 10px;
-    border-radius: 4px;
-    padding: 16px 32px;
-}
-
-
-
-footer{
-
-}
-
-
-
-
-
-
-
-.hero {
     background-color: #2E2F42;
     color: #fff;
 }
-.your_busines {
+.container .your_busines {
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
     text-align: center;
     color: #fff;
+
+
+    padding: 188px 236px;
 }
 
-.hero .order {
+.container > button {
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    padding-bottom: 188px;
+}
+
+.container .order {
     background: #4d5ae5;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    color: #ffffff 
+    color: #ffffff;
+
+    border-radius: 4px;
+    padding: 16px 32px;
 }
 
-.hero .order:hover,
-.hero .order:focus {
+.section_hero .order:hover,
+.section_hero .order:focus {
     background-color: #404BBF;
+}
+
+
+/*________________________________________________Second Section________________________________________________________*/
+.section_1 .container {
+    margin: 0 0 96px 0;
+}
+
+.section_1 .container .feature {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: calc((100%-72)/4);
+    gap: 24px;
+    align-items: center;
+    padding: 120px 0 120px;
+
+}
+
+.section_1 h2 {
+    visibility: hidden;
+}
+.container .description {
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #2e2f42;
 }
 
 .feature .card {
@@ -192,6 +198,8 @@ footer{
 }
 
 .feature .text {
+    padding-top: 8px;
+
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -199,24 +207,38 @@ footer{
     color: #434455 ;
 }
 
-.part_3 {
+
+/*_______________________________________Third Section__________________________________________________________________*/
+
+.section_2 .container {
     background-color: #F4F4FD;
+    padding: 120px 0;
+    margin: 0 0 96px 0;
+
 }
 
-.description {
-    font-size: 36px;
-    line-height: 1.11;
-    text-align: center;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: #2e2f42;
+.section_2 .container .our_team {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: calc((100%-72)/4);
+    gap: 24px;
+    align-items: center;
+    padding: 120px 0 120px;
 }
 
-.part_3 .team {
+.section_2 .container .description {
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.section_2 .container .team {
     background-color: #FFFFFF;
 }
 
 .team .card {
+    padding-top: 32px;
+
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -224,6 +246,8 @@ footer{
     color: #2e2f42;
 }
  .team .text {
+    padding-bottom: 32px;
+
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -231,6 +255,8 @@ footer{
  }
 
 .portfolio .card {
+    
+
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
