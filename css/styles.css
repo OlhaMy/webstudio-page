@@ -3,7 +3,6 @@ body {
     font-family: "Roboto", sans-serif;
     background-color: #FFFFFF;
     color: #434455;
-   
 }
 
 *,
@@ -16,6 +15,7 @@ body {
 .container {
     margin: 0;
     max-width: 1158px;
+    justify-content: center;
     align-items: center;
 }
 
@@ -253,9 +253,21 @@ main{
     letter-spacing: 0.02em;
     color: #434455 ;
  }
+/*_________________________________________Forty Section_______________________________________________________________________*/
+
+.section_3 .container .our_portfolio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: calc((100%-48)/3);
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0 120px;
+}
 
 .portfolio .card {
-    
+    padding-top: 32px;
 
     font-weight: 500;
     font-size: 20px;
@@ -264,17 +276,24 @@ main{
     color: #2e2f42;
 }
 .portfolio .text {
+    padding: 8px 0 32px 0;
+
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
 }
+/*_________________________________________Footer______________________________________________________________________________*/
+.boden .container {
+    display: block;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 120px 0;
 
-
-.boden{
     background-color: #2e2f42;
 }
+
 .boden .logo-text {
     font-weight: 400;
     font-size: 16px;
