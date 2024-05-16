@@ -3,6 +3,7 @@ body {
     font-family: "Roboto", sans-serif;
     background-color: #FFFFFF;
     color: #434455;
+    margin: 0;
 }
 
 *,
@@ -38,15 +39,18 @@ img {
 .header {
     border-bottom: 1px solid #e7e9fc;
 }
-.header .container {
-    display: flex;
-}
 
 .container {
     margin: 0;
-    max-width: 1158px;
+    width: 1158px;
     padding: 0 15px;
 }
+
+.header .container {
+    display: flex; 
+}
+
+
 
 .container .navigation {
     display: flex;
@@ -74,22 +78,20 @@ img {
 
     margin-right: 76px;
 }
-.container .contacts {
-    display: flex;
-    align-items: center;
-}
+
     
 .contacts .our_contacts {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
     font-weight: 500;
     font-style: normal;
     line-height: 1.5;
     letter-spacing: 0.02em;
-
-    padding: 24px 0;
-    gap: 40px;
 }
     
-.our_contacts > li :not(:last-child) {
+.our_contacts .link :not(:last-child) {
     margin-right: 40px;
 }
 
@@ -125,22 +127,22 @@ img {
     color: #404BBF;
 }
 
-main{
-    flex-grow: 1;
-}
+
 /*_________________________________________________first Section__________________________________________________________________*/
-
-.section_hero .container{
-    display: block;
-    padding: 188px 0;
+.section_hero {
+    padding: 188px 0; 
     margin: 0 0 96px 0;
-
-    align-items: center;
     background-color: #2E2F42;
     color: #fff;
+    margin: 0 0 96px 0;
+   
 }
+.section_hero .container{
+    display: block;
+    align-items: center;
+}
+
 .container .your_busines {
-    justify-content: center;
     max-width: 496px;
     font-weight: 700;
     font-size: 56px;
@@ -152,6 +154,8 @@ main{
 
 .container .order {
     display: block;
+    align-items: center;
+    justify-content: center;
     min-width: 169px;
     height: 56px;
     border: none; 
@@ -175,19 +179,22 @@ main{
 
 
 /*________________________________________________Second Section________________________________________________________*/
-.section_1 .container {
+
+.section_1 {
+    padding: 120px 0;
     margin: 0 0 96px 0;
 }
-
 .section_1 .container .feature {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: calc((100%-72)/4);
-    gap: 24px;
+    
     align-items: center;
-    padding: 120px 0 120px;
+}
 
+.feature .card_container {
+    flex-basis: calc((100%-72)/4);
+    gap: 24px;
 }
 
 .section_1 h2 {
@@ -208,11 +215,11 @@ main{
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+
+    margin-bottom: 8px;
 }
 
 .feature .text {
-    padding-top: 8px;
-
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -223,7 +230,7 @@ main{
 
 /*_______________________________________Third Section__________________________________________________________________*/
 
-.section_2 .container {
+.section_2 {
     background-color: #F4F4FD;
     padding: 120px 0;
     margin: 0 0 96px 0;
@@ -238,9 +245,11 @@ main{
     gap: 24px;
     align-items: center;
     padding: 120px 0 120px;
+    border-radius: 0px 0px 4px 4px; 
 }
 
 .section_2 .container .description {
+    margin-bottom: 72px;
     align-items: flex-start;
     justify-content: center;
 }
@@ -249,8 +258,14 @@ main{
     background-color: #FFFFFF;
 }
 
-.team .card {
-    padding-top: 32px;
+.team .name_box {
+    border-radius: 0px 0px 4px 4px; 
+    padding: 32px 0
+}
+
+.name_box .card {
+    text-align: center;
+    margin-bottom: 8px;
 
     font-weight: 500;
     font-size: 20px;
@@ -258,8 +273,8 @@ main{
     letter-spacing: 0.02em;
     color: #2e2f42;
 }
- .team .text {
-    padding-bottom: 32px;
+ .name_box .text {
+    text-align: center; 
 
     font-size: 16px;
     line-height: 1.5;
@@ -267,20 +282,39 @@ main{
     color: #434455 ;
  }
 /*_________________________________________Forty Section_______________________________________________________________________*/
+.section_3 {
+    padding: 120px 0 120px;
+  
+}
+
 
 .section_3 .container .our_portfolio {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: calc((100%-48)/3);
     gap: 24px;
+    row-gap: 48px;
     justify-content: center;
     align-items: center;
-    padding: 120px 0 120px;
+   
 }
 
-.portfolio .card {
-    padding-top: 32px;
+.our_portfolio .portfolio {
+    width: calc((100%-48)/3);
+}
+.portfolio .object_card {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none; 
+
+}
+
+.section_3 .container .description {
+    margin-bottom: 72px; 
+}
+
+.object_card .card {
+    margin-bottom: 8px;
 
     font-weight: 500;
     font-size: 20px;
@@ -288,9 +322,7 @@ main{
     letter-spacing: 0.02em;
     color: #2e2f42;
 }
-.portfolio .text {
-    padding: 8px 0 32px 0;
-
+.object_card .text {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -298,16 +330,29 @@ main{
     color: #434455;
 }
 /*_________________________________________Footer______________________________________________________________________________*/
-.boden .container {
+.boden {
+    padding: 100px 0;
     display: block;
     align-items: center;
     justify-content: flex-start;
-    padding: 120px 0;
 
     background-color: #2e2f42;
 }
 
+.boden .container {
+    
+   
+
+}
+
+.container .logo {
+    display: inline-block;
+    margin-bottom: 16px; 
+}
+
 .boden .logo-text {
+    max-width: 264px;
+
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
