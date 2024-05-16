@@ -62,7 +62,7 @@ img {
     gap: 40px;
    
 }
-.navigation .title {
+ .title .link {
     padding: 24px 0;
 }
 
@@ -85,7 +85,6 @@ img {
     
 .contacts .our_contacts {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     gap: 40px;
 
@@ -93,6 +92,9 @@ img {
     font-style: normal;
     line-height: 1.5;
     letter-spacing: 0.02em;
+}
+.our_contacts .link {
+    padding: 24px 0;
 }
 
 .studio {
