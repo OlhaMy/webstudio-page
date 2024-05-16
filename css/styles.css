@@ -41,8 +41,8 @@ img {
 }
 
 .container {
-    margin: 0;
     width: 1158px;
+    margin: 0;
     padding: 0 15px;
 }
 
@@ -180,24 +180,23 @@ img {
 
 /*________________________________________________Second Section________________________________________________________*/
 
-.section_1 {
+.section_first {
     padding: 120px 0;
     margin: 0 0 96px 0;
 }
-.section_1 .container .feature {
+.section_first .container .feature {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    
+    gap: 24px;
     align-items: center;
 }
 
 .feature .card_container {
-    flex-basis: calc((100%-72)/4);
-    gap: 24px;
+    width: calc((100% - 72px) / 4); 
 }
 
-.section_1 h2 {
+.section_first h2 {
     visibility: hidden;
 }
 .container .description {
@@ -230,32 +229,32 @@ img {
 
 /*_______________________________________Third Section__________________________________________________________________*/
 
-.section_2 {
+.section_second {
     background-color: #F4F4FD;
     padding: 120px 0;
     margin: 0 0 96px 0;
 
 }
 
-.section_2 .container .our_team {
+.section_second .container .our_team {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: calc((100%-72)/4);
     gap: 24px;
     align-items: center;
     padding: 120px 0 120px;
-    border-radius: 0px 0px 4px 4px; 
+   
+}
+.our_team .team {
+    width: calc((100% - 72px) / 4); 
+    border-radius: 0px 0px 4px 4px;
+    background-color: #FFFFFF; 
 }
 
-.section_2 .container .description {
+.section_second .container .description {
     margin-bottom: 72px;
     align-items: flex-start;
     justify-content: center;
-}
-
-.section_2 .container .team {
-    background-color: #FFFFFF;
 }
 
 .team .name_box {
@@ -282,13 +281,13 @@ img {
     color: #434455 ;
  }
 /*_________________________________________Forty Section_______________________________________________________________________*/
-.section_3 {
+.section_three {
     padding: 120px 0 120px;
   
 }
 
 
-.section_3 .container .our_portfolio {
+.section_three .container .our_portfolio {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -300,7 +299,7 @@ img {
 }
 
 .our_portfolio .portfolio {
-    width: calc((100%-48)/3);
+    width: calc((100% - 48px) / 3);
 }
 .portfolio .object_card {
     padding: 32px 16px;
@@ -309,7 +308,7 @@ img {
 
 }
 
-.section_3 .container .description {
+.section_three .container .description {
     margin-bottom: 72px; 
 }
 
@@ -339,11 +338,6 @@ img {
     background-color: #2e2f42;
 }
 
-.boden .container {
-    
-   
-
-}
 
 .container .logo {
     display: inline-block;
