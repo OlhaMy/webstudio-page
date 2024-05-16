@@ -3,7 +3,6 @@ body {
     font-family: "Roboto", sans-serif;
     background-color: #FFFFFF;
     color: #434455;
-    margin: 0;
 }
 
 *,
@@ -34,17 +33,18 @@ img {
     max-width: 100%;
     margin-bottom: 0;
 }
+.container {
+    width: 1158px;
+    margin: 0;
+    padding: 0 15px;
+}
 /*_____________________________________________________Header___________________________________________________________________*/
 
 .header {
     border-bottom: 1px solid #e7e9fc;
 }
 
-.container {
-    width: 1158px;
-    margin: 0;
-    padding: 0 15px;
-}
+
 
 .header .container {
     display: flex; 
