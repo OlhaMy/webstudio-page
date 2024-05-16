@@ -35,7 +35,7 @@ img {
 }
 .container {
     width: 1158px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0 15px;
 }
 /*_____________________________________________________Header___________________________________________________________________*/
@@ -60,10 +60,13 @@ img {
 .navigation .title {
     display: flex;
     gap: 40px;
+   
+}
+.navigation .title {
     padding: 24px 0;
 }
 
-.title > li :not(:last-child){
+.navigation .title :not(:last-child){
     margin-right: 40px;
 }
 
@@ -82,6 +85,7 @@ img {
     
 .contacts .our_contacts {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     gap: 40px;
 
@@ -89,10 +93,6 @@ img {
     font-style: normal;
     line-height: 1.5;
     letter-spacing: 0.02em;
-}
-    
-.our_contacts .link :not(:last-child) {
-    margin-right: 40px;
 }
 
 .studio {
@@ -196,8 +196,21 @@ img {
     width: calc((100% - 72px) / 4); 
 }
 
-.section_first h2 {
+.section_first .container .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
     visibility: hidden;
+    pointer-events: none;
+    position: absolute;
 }
 .container .description {
     font-size: 36px;
