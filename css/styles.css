@@ -51,14 +51,15 @@ img {
 
 .header .container {
     display: flex; 
-    align-items: center;
+    align-items: baseline;
+   
 }
 
 
 
 .container .navigation {
     display: flex;
-    align-items: center;
+    align-items: baseline;
 
 }
 .navigation .title {
