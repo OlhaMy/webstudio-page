@@ -51,6 +51,7 @@ img {
 
 .header .container {
     display: flex; 
+    align-items: center;
 }
 
 
@@ -66,6 +67,7 @@ img {
    
 }
  .title .link {
+    display: block;
     padding: 24px 0;
 }
 
@@ -74,6 +76,10 @@ img {
 }
 
 .navigation .logo {
+    display: block;
+    margin-right: 76px;
+   
+
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -81,8 +87,6 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-
-    margin-right: 76px;
 }
 
     
@@ -97,7 +101,12 @@ img {
     letter-spacing: 0.02em;
 }
 .our_contacts .link {
-    padding: 24px 0;
+    display: block;
+    padding: 24px;
+}
+
+.contacts .our_contacts :not(:last-child) {
+    margin-left: 76px;
 }
 
 .studio {
