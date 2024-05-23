@@ -332,8 +332,35 @@ img {
     letter-spacing: 0.02em;
     color: #2e2f42;
 }
+.icon-socialmedia-list {
+    display: flex;
+    margin: 0;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
+.icon-socialmedia-item {
+    list-style: none;
+}
+.socialmedia-link {
+    display: flex;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: #4d5ae5;
+    align-items: center;
+    justify-content: center;
+    
+}
+.icon {
+    display: block;
+    
+   
+}
+
  .name_box .text {
     text-align: center; 
+    padding-bottom: 8px;
 
     font-size: 16px;
     line-height: 1.5;
