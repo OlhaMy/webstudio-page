@@ -59,7 +59,7 @@ img {
 
 .container .navigation {
     display: flex;
-    margin-right: 332px;
+    margin-right: auto;
 }
 
 .navigation .title {
@@ -128,9 +128,7 @@ img {
 .our_contacts .link:focus{
     color: #404BBF;
 }
-.test {
-    box-shadow: 2px 3px 5px 3px red;
-}
+
 /*          #endregion header_____________*/
 
 /*__________#region Hero__________________*/
