@@ -1,4 +1,4 @@
-
+/*_________#region base___________*/
 body {
     font-family: "Roboto", sans-serif;
     background-color: #FFFFFF;
@@ -29,6 +29,8 @@ ul {
 }
  a {
     text-decoration: none;
+    margin: 0;
+    padding: 0;
  }
 
 img {
@@ -39,47 +41,35 @@ img {
 .container {
     width: 1158px;
     margin: 0 auto;
-    padding: 0 15px;
 }
-/*_____________________________________________________Header___________________________________________________________________*/
+/*____________#endregion base__________*/
+
+/*____________#region Header____________*/
 
 .header {
     border-bottom: 1px solid #e7e9fc;
 }
 
-
-
 .header .container {
     display: flex; 
-    align-items: baseline;
-   
+    align-items: center;
+    padding: 24px 0;
+
 }
-
-
 
 .container .navigation {
     display: flex;
-    align-items: baseline;
-
+    margin-right: 332px;
 }
+
 .navigation .title {
     display: flex;
     gap: 40px;
-   
-}
- .title .link {
-    display: block;
-    padding: 24px 0;
-}
-
-.navigation .title :not(:last-child){
-    margin-right: 40px;
 }
 
 .navigation .logo {
     display: block;
     margin-right: 76px;
-   
 
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -92,22 +82,13 @@ img {
 
     
 .contacts .our_contacts {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-
+   display: flex;
+   gap: 40px;
+   
     font-weight: 500;
     font-style: normal;
     line-height: 1.5;
     letter-spacing: 0.02em;
-}
-.our_contacts .link {
-    display: block;
-    padding: 24px;
-}
-
-.contacts .our_contacts :not(:last-child) {
-    margin-left: 76px;
 }
 
 .studio {
@@ -147,16 +128,16 @@ img {
 .our_contacts .link:focus{
     color: #404BBF;
 }
+/*          #endregion header_____________*/
 
-
-/*_________________________________________________#region Hero__________________________________________________________________*/
+/*__________#region Hero__________________*/
 .section_hero {
     padding: 188px 0; 
-    margin: 0;
+    margin: 0 auto;
     max-width: 1440рх;
     background-color: #2E2F42;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)),
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)),
     url('../images/people-office.jpg');
     height: 600px; 
     background-position: center; 
@@ -212,8 +193,10 @@ img {
     background-color: #404BBF;
 }
 
+/*_________#endregion  hero__________*/
 
-/*________________________________________________Second Section________________________________________________________*/
+
+/*_________#region Section 1__________*/
 
 .section_first {
     padding: 120px 156px 282px;
@@ -292,9 +275,10 @@ img {
     letter-spacing: 0.02em;
     color: #434455 ;
 }
+/*_______________#endregion Section1______*/
 
 
-/*_______________________________________Third Section__________________________________________________________________*/
+/*_____________   #region Section 2________*/
 
 .section_second {
     background-color: #F4F4FD;
@@ -328,7 +312,10 @@ img {
 }
 
 .team .name_box {
-    border-radius: 0px 0px 4px 4px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0px 4px; 
     padding: 32px 0
 }
 
@@ -343,11 +330,8 @@ img {
     color: #2e2f42;
 }
 .icon-socialmedia-list {
-    display: flex;
-    margin: 0;
+    display: inline-flex;
     gap: 24px;
-    align-items: center;
-    justify-content: center;
 }
 
 .icon {
@@ -387,12 +371,12 @@ img {
     letter-spacing: 0.02em;
     color: #434455 ;
  }
-/*_________________________________________Forty Section_______________________________________________________________________*/
-.section_three {
-    padding: 120px 0 120px;
-  
-}
+/*____________#endregion Section 2___________*/
 
+/*____________#region Section 3______________*/
+.section_three {
+    padding: 120px 0 120px; 
+}
 
 .section_three .container .our_portfolio {
     display: flex;
@@ -402,17 +386,23 @@ img {
     row-gap: 48px;
     justify-content: center;
     align-items: center;
-   
 }
 
 .our_portfolio .portfolio {
     width: calc((100% - 48px) / 3);
 }
+
+.our_portfolio .portfolio:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    background: #fff;
+}
+
 .portfolio .object_card {
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none; 
-
 }
 
 .section_three .container .description {
@@ -435,22 +425,32 @@ img {
     letter-spacing: 0.02em;
     color: #434455;
 }
-/*_________________________________________#region Footer______________________________________________________________________________*/
+/*________________#endregion Section 3___*/
+
+/*______________#region Footer___________*/
 .boden {
     padding: 100px 0;
     display: block;
     background-color: #2e2f42;
 }
 .boden .container {
- display: flex;
+    display: flex;
+    align-items: baseline;
+    margin: 0;
 }
 
 .logo-footer {
-display: block;
-width: 264px;
+    display: block;
+    margin: 0 120px 0 156px;
+    width: 264px;
+}
+
+.logo-footer .logo {
+    padding-bottom: 16px;
 }
 .socialmedia-footer {
     display: block;
+    margin: 0;
     width: 208;
 }
 .boden .logo-text {
@@ -466,6 +466,7 @@ width: 264px;
 
 .container .boden-titel {
     display: flex;
+    padding-bottom: 16px;
 
     font-weight: 500;
     font-size: 16px;
@@ -474,11 +475,8 @@ width: 264px;
     color: #fff;
 }
 .icon-socialmedia-list {
+    display: inline-flex;
+    gap: 16px;
 }
-.icon-socialmedia-item {
-}
-.socialmedia-link {
-}
-.icon {
-}
-/*---------------#endregion footer------------------------------*/
+
+/*--#endregion footer-*/
