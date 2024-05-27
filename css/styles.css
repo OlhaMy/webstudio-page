@@ -491,13 +491,13 @@ img {
     margin: 0;
 }
 
-.logo {
+.logo-footer-area {
     display: inline-block;
     margin: 0 120px 0 156px;
     width: 264px;
 }
 
-.logo .logo-footer {
+.logo-footer-area .logo-footer {
     font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
@@ -506,6 +506,14 @@ img {
     color: #4D5AE5;
 
     padding-bottom: 16px;
+
+    transition-property: color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-footer-area .logo-footer:hover,
+.logo-footer-area .logo-footer:focus {
+    color: #404BBF;
 }
 .socialmedia-footer {
     display: inline-block;
