@@ -36,11 +36,12 @@ ul {
 img {
     display: block;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
 }
 .container {
     width: 1158px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 /*____________#endregion base__________*/
 
@@ -53,18 +54,34 @@ img {
 .header .container {
     display: flex; 
     align-items: center;
-    padding: 24px 0;
-
 }
 
 .container .navigation {
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: auto;
 }
 
 .navigation .title {
     display: flex;
     gap: 40px;
+    padding: 24px 0;
+    position: relative;
+}
+.title .link {
+    padding: 24px 0;
+}
+
+.title .studio::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 2px;
+    background-color: #404BBF;
+    width: 48px;
+    height: 4px;
+    bottom: 0;
 }
 
 .navigation .logo {
@@ -78,9 +95,15 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
+
+    transition-property: color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation .logo:hover,
+.navigation .logo:focus{
+   color: #404BBF;
 }
 
-    
 .contacts .our_contacts {
    display: flex;
    gap: 40px;
@@ -95,10 +118,6 @@ img {
     color: #2e2f42;
 }
 
- .logo:hover,
- .logo:focus{
-    color: #404BBF;
-}
 
 .title .link {
     font-weight: 500;
@@ -106,22 +125,20 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+
+    transition-property: color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .title .link:hover,
 .title .link:focus {
     color: #404bbf;
 }
-.title .link::before, 
-.title .link::after {
-    content: "";
-    width: 100px;
-    height: 2px;
-    border-bottom: 1px solid #2e2f42;
-}
 
 .our_contacts .link {
     color: #434455;
+    transition-property: color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our_contacts .link:hover,
@@ -131,10 +148,9 @@ img {
 
 /*          #endregion header_____________*/
 
-/*__________#region Hero__________________*/
+/* #region Hero*/
 .section_hero {
     padding: 188px 0; 
-    margin: 0 auto;
     max-width: 1440рх;
     background-color: #2E2F42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
@@ -147,7 +163,7 @@ img {
     color: #fff;
    
 }
-.section_hero .container{
+.section_hero .container {
     display: block;
     align-items: center;
     
@@ -155,9 +171,7 @@ img {
 
 
 .container .your_busines {
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 48px;
+    margin: 0 auto 48px;
 
     max-width: 496px;
     font-weight: 700;
@@ -187,10 +201,12 @@ img {
 
     border-radius: 4px;
     padding: 16px 32px;
+
+    transition: backround-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section_hero .order:hover,
-.section_hero .order:focus {
+.container .order:hover,
+.container .order:focus {
     background-color: #404BBF;
 }
 
@@ -200,7 +216,7 @@ img {
 /*_________#region Section 1__________*/
 
 .section_first {
-    padding: 120px 156px 282px;
+    padding: 120px 0;
 }
 .section_first .container .feature {
     background: #fff;
@@ -269,7 +285,7 @@ img {
     letter-spacing: 0.02em;
     color: #2e2f42;
 
-    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .feature .text {
@@ -299,9 +315,12 @@ img {
 .our_team .team {
     width: calc((100% - 72px) / 4); 
     border-radius: 0px 0px 4px 4px;
-    background-color: #FFFFFF; 
+    background-color: #FFFFFF;
     
+    transition-property: box-shadow, backround-color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+    
 .our_team .team:hover{
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 
@@ -354,19 +373,16 @@ img {
     align-items: center;
     justify-content: center;
     
-
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
-}
-.socialmedia-link .icon {
-    fill: #F4F4FD;
+    transition: backround-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socialmedia-link:hover,
 .socialmedia-link:focus {
     background-color: #31D0AA;
+}
+
+.socialmedia-link .icon {
+    fill: #F4F4FD;
 }
 
  .name_box .text {
@@ -382,7 +398,7 @@ img {
 
 /*____________#region Section 3______________*/
 .section_three {
-    padding: 120px 0 120px; 
+    padding: 120px 0; 
 }
 
 .section_three .container .our_portfolio {
@@ -396,16 +412,23 @@ img {
 }
 
 .our_portfolio .portfolio {
-    position: relative;
-    overflow: hidden;
+    
     width: calc((100% - 48px) / 3);
+    transition: box-shadow, backround;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .overflow {
+    position: relative;
+    overflow: hidden;
+}
+.overflow-text {
     position: absolute;
     background-color: #4D5AE5;
     text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     color: #F4F4FD;
-    padding: 40px 32px 164px 32px;
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
@@ -415,9 +438,9 @@ img {
     width: 100%;
     height: 100%;
     transform: translateY(100%);
-    transition: transform 250ms ease-in-out;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio:hover .overflow {
+.portfolio:hover .overflow-text {
     transform: translateY(0);
   }
 
@@ -468,17 +491,24 @@ img {
     margin: 0;
 }
 
-.logo-footer {
-    display: block;
+.logo {
+    display: inline-block;
     margin: 0 120px 0 156px;
     width: 264px;
 }
 
-.logo-footer .logo {
+.logo .logo-footer {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #4D5AE5;
+
     padding-bottom: 16px;
 }
 .socialmedia-footer {
-    display: block;
+    display: inline-block;
     margin: 0;
     width: 208;
 }
