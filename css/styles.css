@@ -68,12 +68,16 @@ img {
 
 .navigation .title {
     display: flex;
-    position: relative;
     gap: 40px;
     padding: 24px 0;
 }
 .title .link {
     padding: 24px 0;
+   
+}
+.title .studio {
+    color: #404bbf;
+    position: relative;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -82,12 +86,11 @@ img {
     display: block;
     position: absolute;
     border-radius: 2px;
-    color: #404bbf;
     background-color: #404bbf; 
     width: 48px;
     height: 4px;
     left: 0;
-    bottom: 0;
+    bottom: -1;
 }
 
 .navigation .logo {
@@ -166,13 +169,12 @@ img {
     background-repeat: no-repeat; 
     background-size: cover;
     color: #fff;
+    max-width: 1440рх;
    
 }
 .section_hero .container {
     display: block;
     align-items: center;
-    max-width: 1440рх;
-    
 }
 
 
@@ -362,7 +364,6 @@ img {
 .icon-socialmedia-list {
     display: flex;
     justify-content: center; 
-    gap: 24px;
 }
 
 .icon {
@@ -371,6 +372,10 @@ img {
 
 .icon-socialmedia-item {
     list-style: none;
+    gap: 24px;
+}
+
+.icon-socialmedia-item a {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .socialmedia-link {
@@ -502,6 +507,7 @@ img {
     display: inline-block;
     width: 264px;
     margin-right: 120px;
+    margin-left: 156px;
 }
 
 .logo-footer-area .logo-footer {
@@ -522,11 +528,10 @@ img {
 .logo-footer-area .logo-footer:focus {
     color: #404BBF;
 }
-.socialmedia-footer {
-    
+.socialmedia-footer { 
     margin: 0;
-   
 }
+
 .boden .logo-text {
     max-width: 264px;
 
@@ -549,10 +554,17 @@ img {
     color: #FFFFFF;
 }
 .icon-socialmedia-list {
+    gap: 16px;
+}
+.icon-socialmedia-item {
     width: 40px;
     height: 40px;
-    gap: 16px;
     transition: backround-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-socialmedia-item .socialmedia-link:hover,
+.icon-socialmedia-item .socialmedia-link:focus {
+    background-color: #31d0aa;
 }
 
 
