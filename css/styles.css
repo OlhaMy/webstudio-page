@@ -70,17 +70,19 @@ img {
     display: flex;
     gap: 40px;
     padding: 24px 0;
-}
-.title .link {
-    padding: 24px 0;
-}
-.title .studio {
     position: relative;
-    color: #404bbf; 
+}
+
+.studio {
+   color: #2E2F42;
+}
+
+.title .link-home {
+    color: #404bbf;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.title .studio::after {
+.title .link-home::after {
     content: '';
     display: block;
     position: absolute;
