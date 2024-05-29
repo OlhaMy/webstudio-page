@@ -516,7 +516,7 @@ img {
 .boden .container {
     display: flex;
     align-items: baseline;
-    justify-content: center;
+   
 }
 
 .logo-footer-area {
@@ -588,35 +588,45 @@ img {
     background-color: var(--navy-blue);
 
 }
-.subscribe-text-footer {
+.subscribe-text {
     margin-bottom: 16px;
     font-weight: 500;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--white);
 }
-.form-email {
+.subscribe-text-footer {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 24px;
-  
+ 
 }
+
 .email-user {
     color: var(--white);
-    background-color: var(--navy-blue);
+    background-color: transparent;
     border: 1px solid var(--white);
     border-radius: 4px;
-    width: 264px;
+    width: 264px; 
     height: 40px;
+
+    font-size: 12px; 
+    line-height: 2;
+    letter-spacing: 0.04em;
+    padding-left: 16px; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
 }
+.email-user::placeholder {
+    color: var(--cloud);
+}
+
 .btn-subscribe {
-    position: relative;
-    top:0;
-    left: 0;
-    display: inline-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px 24px;
- 
-    
 
     border: none;
     border-radius: 4px;
@@ -632,6 +642,7 @@ img {
     letter-spacing: 0.04em;
     text-align: center;
     color: var(--white);
+    cursor: pointer;
    
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -644,7 +655,7 @@ img {
 }
 
 .plane-link {
-    position: absolute;
+    margin-left: 16px;
     top: 8px;
     right: 24px;
     height: 24px;
@@ -671,11 +682,18 @@ transition-property: visibility, pointer-events, opacity;
 transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
+
 .backdrop.is-open {
     visibility: visible;
     pointer-events: auto;
     opacity: 1;
 }
+
+.backdrop.is-open:focus {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 .modal {
     width: 408px;
@@ -694,15 +712,24 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .btn-close-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    
     position: absolute;
     top: 24px;
     right: 24px;
+    
     width: 24px;
     height: 24px;
     border-radius: 50%;
     background-color:  #E7E9FC;
-    border: none;
-    transition: backroun-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer; 
+    
+    transition-property: bachround-color, border;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close {
@@ -747,8 +774,9 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.16;
+    line-height: 1.17;
     letter-spacing: 0.48px;
+    margin-bottom: 4px;
     
 }
 .modal_box {
@@ -759,16 +787,17 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);;
     width: 100%;
     outline: none;
     padding: 11px 11px 11px 38px;
+    outline: transparent;
 
     border-radius: 4px;
     background-color: transparent;
     border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
-   
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
    
 }
 
 .modal_input:focus {
-    border: 1px solid var(--IRIS, #4D5AE5);
+    border-color: #4D5AE5;
 }
 .modal_label_icon {
     position: absolute;
@@ -798,16 +827,20 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 
 .modal_text_textarea {
     width: 100%;
+    height: 120px;
+    font-size: 12px; 
+    line-height: 1.17; 
+    letter-spacing: 0.04em;
     padding: 8px 16px;
     border-radius: 4px;
     border-radius: 4px;
     border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
     resize: none;
-    min-height: 120px;
+    background-color: transparent;
     outline: transparent;
-    color: var(--navy-blue);
+    color: rgba(46, 47, 66, 0.4);
 
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal_text_textarea::placeholder { 
     font-size: 12px;
@@ -818,7 +851,7 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .modal_text_textarea:focus {
-    border: 1px solid var(--IRIS, #4D5AE5);
+    border-color: var(--IRIS, #4D5AE5);
 }
 
 .checkbox-area {
@@ -831,7 +864,7 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.16;
+    line-height: 1.17;
     letter-spacing: 0.48px;
 }
 
@@ -840,13 +873,16 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);;
     height: 16px;
     margin-right: 8px;
 
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-
+    fill: transparent;
     border-radius: 2px;
     border: 1px solid var(--navy-blue-modal);
     background-color: var(--cloud);
+
+    transition-property: background-color, border, fill;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -871,8 +907,9 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .checkbox:checked + .checkbox_label > .checkbox-user-icon {
-    background-color:var(--iris);
+    background-color:#404bbf;
     border: none;
+    fill: #F4F4FD;
 }
 
 
