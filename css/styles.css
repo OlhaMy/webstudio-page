@@ -679,6 +679,8 @@ pointer-events: none;
 opacity: 0;
 visibility: hidden;
 
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);   
 }
 
 
@@ -702,8 +704,8 @@ visibility: hidden;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 72px 24px 24px;
-    transition-property: visibility, pointer-events, opacity;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);;    
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .btn-close-modal {
@@ -723,8 +725,8 @@ visibility: hidden;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer; 
     
-    transition-property: background-color, border;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .modal-close {
@@ -854,7 +856,7 @@ visibility: hidden;
 }
 
 .checkbox_label {
-    display: flex;
+   
     color: var(--LIGHT-SLATE, #8E8F99);
     font-size: 12px;
     font-style: normal;
@@ -864,20 +866,22 @@ visibility: hidden;
 }
 
 .checkbox-user-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
     width: 16px;
     height: 16px;
     margin-right: 8px;
 
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
     fill: transparent;
     border-radius: 2px;
     border: 1px solid var(--navy-blue-modal);
     background-color: var(--cloud);
 
-    transition-property: background-color, border, fill;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -942,7 +946,7 @@ visibility: hidden;
     line-height: 1.5;
     letter-spacing: 0.04em;
 
-    transition: backround-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .btn-send:hover,
