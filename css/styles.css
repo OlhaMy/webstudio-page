@@ -588,6 +588,13 @@ img {
     background-color: var(--navy-blue);
 
 }
+.form-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
 .subscribe-text {
     margin-bottom: 16px;
     font-weight: 500;
@@ -596,13 +603,7 @@ img {
     letter-spacing: 0.02em;
     color: var(--white);
 }
-.subscribe-text-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
- 
-}
+
 
 .email-user {
     color: var(--white);
@@ -854,9 +855,6 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);;
     border-color: var(--IRIS, #4D5AE5);
 }
 
-.checkbox-area {
-    margin-bottom: 24px;
-}
 
 .checkbox_label {
     display: flex;
@@ -866,6 +864,8 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);;
     font-weight: 400;
     line-height: 1.17;
     letter-spacing: 0.48px;
+
+    margin-bottom: 24px;
 }
 
 .checkbox-user-icon {
@@ -930,25 +930,27 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);;
     text-align: center;
     justify-content: center;
 
+    min-width: 169px;
+    height: 56px;
+
 
     border-radius: 4px;
     border: none;
     background-color: var(--IRIS, #4D5AE5);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
-    
+    cursor: pointer;
     color: var(--WHITE, #FFF);
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 1.5;
-    letter-spacing: 0.64px;
-    transition-property: backround, box-shadow;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.04em;
+
+    transition: backround-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-send:hover,
 .btn-send:focus {
     background-color: var(--OCEAN, #404BBF);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
