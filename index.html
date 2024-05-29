@@ -502,9 +502,9 @@
 
 
 
-    <div class="backdrop">
+    <div class="backdrop is-open">
       <div class="modal">
-        <button class="btn-close-modal">
+        <button class="btn-close-modal" type="button">
           <svg class="modal-close" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -551,7 +551,10 @@
           </div>
         
           <div class="checkbox-area">
-            <input class="visually-hidden checkbox" type="checkbox" name="checkbox_user" id="checkbox_user">
+            <input class="checkbox visually-hidden" 
+            type="checkbox" 
+            name="checkbox_user" 
+            id="checkbox_user">
             <label class="checkbox_label" for="checkbox_user">
             <span class="checkbox-user-icon">
               <svg class="checkbox_icon" width="10" height="8">
@@ -559,12 +562,11 @@
               </svg>
             </span>
               I accept the terms and conditions of the 
-              <a class="checkbox_link_span" href="#">
-              Privacy Policy</a></label>
+              <a class="checkbox_link_span" href="#">Privacy Policy</a></label>
           </div>
         </form>
 
-        <button class="btn-send" type="button">Send</button>
+        <button class="btn-send" type="submit">Send</button>
 
       </div>
     </div>
