@@ -65,7 +65,7 @@ img {
      width: 296px;
      padding: 0 4px;
      margin: 0 auto;
-     outline: solid red;
+     /* outline: solid red; */
   }
 
 @media only screen and (min-width: 768px) {
@@ -82,9 +82,9 @@ img {
 }
 
 
-/* ____________#endregion base__________ */
+/* #endregion base */
 
-/*____________#region Header____________*/
+/*#region header */
 .header {
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
     0px 1px 1px rgba(46, 47, 66, 0.16), 
@@ -146,8 +146,8 @@ img {
         display: none;
     } 
 .menu-header {
-        width: 24px;
-        height: 24px;
+        min-width: 24px;
+        min-height: 24px;
         padding: 16px 16px 16px 0;
         margin-left: auto;
         display: flex;
@@ -261,96 +261,204 @@ img {
 .our_contacts .link:focus{
     color: #404BBF;
 }
-
-/* __________ #endregion header_____________*/
+/* #endregion header */
 
 /* #region mobail menu */
-.nav-container {
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #FFF;
-    width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-    pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);;
-}
-.nav-container.is-open{
-    visibility: visible;
-    pointer-events: auto;
-    opacity: 1; */
-}
+
 .mobile_menu {
+    position: fixed;
+    display: none;
+    inset: 0;
+    left: 0;
+    top: 0;
+
     display: flex;
     flex-direction: column;
-    max-width: 320px;
-    outline: solid red;
+   
     
+    padding: 72px 16px 40px 16px;
+    margin-bottom: auto;
 
+    transform: translateX(100%);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: transform;
 }
-/* @media only screen and (min-width: 768px) {
+/* .mobile_menu.is-open {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 0;
+} */
+
+@media only screen and (min-width: 768px) {
     .mobile_menu  {
     display: none;
   } 
-  }*/
-
+  }
+  
 .btn-close-menu {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    background-color: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    top: 24px;
+    right: 24px;
+    min-height: 24px;
+    min-width: 24px;
 }
-.menu-close {
+
+.titel_mobail_menu {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 40px;
+    color: var(--NAVY-BLUE, #2E2F42);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
 }
-.titl_mobail_menu {
+.link_mobail_menu.activ {
+    color: #404BBF;
 }
+
 
 .link_mobail_menu {
+    color: var(--NAVY-BLUE, #2E2F42);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
 }
+
 .our_contacts_mobail {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    
+    margin-bottom: 48px;
+}
+
+.link_menu_adress {
+    color: var(--SLATE, #434455);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+
+}
+.link_menu_adress[href*="tel"] {
+    color: #4D5AE5;
 }
 .icon-socialmedia-list_mobail {
+    display: flex;
+    gap: 40px;
 }
-.icon-socialmedia-item {
-}
-.socialmedia-link {
-}
-.icon {
-}
+
 /* #endregion mobail menu */
 
-/*    _____#region Hero____________________*/
+/* #region hero */
 .section_hero {
     max-width: 1440px;
     margin: 0 auto; 
-    padding: 188px 0; 
+    padding: 72px 0;
     background-color: #2E2F42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
     rgba(46, 47, 66, 0.7)),
-    url('../images/people-office.jpg');
-    height: 600px; 
+    url('../images/hero/bg_mob@1x.jpg');
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
     color: #fff;   
 }
-
 .section_hero .container {
     display: block;
-    align-items: center;
+}
+
+@media (min-resolution: 192dpi) {
+    .section_hero {
+        background-color: #2E2F42;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+        url('../images/hero/bg_mob@2x.jpg');
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .section_hero  {
+    padding: 112px 0;
+    background-color: #2E2F42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)),
+    url('../images/hero/bg_tab@1x.jpg');
+  }
+}
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .section_hero {
+        background-color: #2E2F42;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+        url('../images/hero/bg_tab@2x.jpg');
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+    .section_hero  {
+    padding: 188px 0;
+    background-color: #2E2F42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)),
+    url('../images/hero/bg_des@1x.jpg');
+  }
+}
+@media only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+    .section_hero {
+        background-color: #2E2F42;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+        url('../images/hero/bg_des@2x.jpg');
+  }
 }
 
 
 .container .your_busines {
-    margin: 0 auto 48px;
-
-    max-width: 496px;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
-    letter-spacing: 0.02em;
+    margin: 0 auto 72px;
+    
+    color: #FFF;
     text-align: center;
-    color: #fff;
+    max-width: 496px;
+
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+}
+
+@media only screen and (min-width: 768px) {
+    .container .your_busines  {
+        margin: 0 auto 36px;
+
+        font-size: 56px;
+        line-height: 1.07;
+        letter-spacing: 1.12px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+    .container .your_busines {
+        margin: 0 auto 48px;
+        
+  }
 }
 
 .container .order {
@@ -381,10 +489,9 @@ img {
     background-color: #404BBF;
 }
 
-/*_________#endregion  hero__________*/
+/* #endregion  hero */
 
-
-/*_________#region Section 1__________*/
+/* #region Section 1 */
 
 .section_first {
     padding: 120px 0;
@@ -467,7 +574,7 @@ img {
     letter-spacing: 0.02em;
     color: #434455 ;
 }
-/*_______________#endregion Section1______*/
+/* #endregion Section 1 */
 
 
 /*_____________   #region Section 2________*/
