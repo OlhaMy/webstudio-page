@@ -135,7 +135,7 @@
           </div>
         </section>
 <!--------------------------------------#endregion hero-------------------------------------------->
-<div class="hide">
+
 <!--------------------------------------#region section 1------------------------------------------->
         <section class="section_first">
           <div class="container">
@@ -193,6 +193,7 @@
           </div>
         </section>
 <!--------------------------------------#endregion section 1----------------------------------------->
+
 <!--------------------------------------#region section 2-------------------------------------------->
         <section class="section_second">
           <div class="container">
@@ -200,10 +201,14 @@
             <ul class="our_team">
               <li class="team">
                 <img
-                  src="./images/img-1.jpg"
+                  srcset="./images/our-team/mark@1x_result.jpg 1x,
+                  ./images/our-team/mark@2x_result.jpg 2x" 
+
+                  src="./images/our-team/marc.jpg"
                   alt="Marc Guerrero"
                   width="264"
                   height="260"
+                  loading="lazy"
                 />
                 <div class="name_box">
                   <h3 class="card">Mark Guerrero</h3>
@@ -242,10 +247,13 @@
               </li>
               <li class="team">
                 <img
-                  src="./images/img-2.jpg"
+                  srcset="./images/our-team/tom@1x_result.jpg 1x,
+                  ./images/our-team/tom@2x_result.jpg 2x"
+                  src="./images/our-team/tom.jpg"
                   alt="Tom Ford"
                   width="264"
                   height="260"
+                  loading="lazy"
                 />
                 <div class="name_box">
                   <h3 class="card">Tom Ford</h3>
@@ -284,10 +292,13 @@
               </li>
               <li class="team">
                 <img
-                  src="./images/img-3.jpg"
+                  srcset="./images/our-team/camila@1x_result.jpg 1x,
+                  ./images/our-team/camila@2x_result.jpg 2x"
+                  src="./images/our-team/camila.jpg"
                   alt="Camila Garcia"
                   width="264"
                   height="260"
+                  loading="lazy"
                 />
                 <div class="name_box">
                   <h3 class="card">Camila Garcia</h3>
@@ -326,10 +337,13 @@
               </li>
               <li class="team">
                 <img
-                  src="./images/img-4.jpg"
+                  srcset="./images/our-team/daniel@1x_result.jpg 1x,
+                  ./images/our-team/daniel@2x_result.jpg 2x"
+                  src="./images/our-team/daniel.jpg"
                   alt="Daniel Wilson"
                   width="264"
                   height="260"
+                  loading="lazy"
                 />
                 <div class="name_box">
                   <h3 class="card">Daniel Wilson</h3>
@@ -378,7 +392,9 @@
               <li class="portfolio">
                <div class="overflow">
                 <img
-                  src="./images/img_port1.jpg"
+                  srcset="./images/portfolio/app@1x-2_result.jpg 1x,
+                  ./images/portfolio/app@2x-2_result.jpg 2x"
+                  src="./images/portfolio/app@1x-2_result.jpg"
                   alt="Banking App"
                   width="360"
                   height="300"
@@ -395,7 +411,9 @@
               <li class="portfolio">
                 <div class="overflow">
                   <img
-                    src="./images/img_port2.jpg"
+                    srcset="./images/portfolio/screen@1x-1_result.jpg 1x,
+                    ./images/portfolio/screen@2x-1_result.jpg 2x"
+                    src="./images/portfolio/screen@1x-1_result.jpg"
                     alt="Cashless Payment"
                     width="360"
                     height="300"
@@ -412,7 +430,9 @@
               <li class="portfolio">
                 <div class="overflow">
                   <img
-                    src="./images/img_port3.jpg"
+                    srcset="./images/portfolio/laptop@1x_result.jpg 1x,
+                    ./images/portfolio/laptop@2x_result.jpg 2x"
+                    src="./images/portfolio/laptop@1x_result.jpg"
                     alt="Meditation App"
                     width="360"
                     height="300"
@@ -430,7 +450,9 @@
               <li class="portfolio">
                 <div class="overflow">
                     <img
-                      src="./images/img_port4.jpg"
+                      srcset="./images/portfolio/taxi@1x-2_result.jpg 1x,
+                      ./images/portfolio/taxi@2x-2_result.jpg 2x"
+                      src="./images/portfolio/taxi@1x-2_result.jpg"
                       alt="Taxi Service"
                       width="360"
                       height="300"
@@ -447,7 +469,9 @@
               <li class="portfolio">
                 <div class="overflow">
                     <img
-                      src="./images/img_port5.jpg"
+                      srcset="./images/portfolio/phon@1x-1_result.jpg 1x,
+                      ./images/portfolio/phon@2x-1_result.jpg 2x"
+                      src="./images/portfolio/phon@1x-1_result.jpg"
                       alt="Screen Illustrations"
                       width="360"
                       height="300"
@@ -464,7 +488,9 @@
               <li class="portfolio">
                 <div class="overflow">
                     <img
-                      src="./images/img_port6.jpg"
+                      srcset="./images/portfolio/marketing@1x_result.jpg 1x,
+                      ./images/portfolio/marketing@2x_result.jpg 2x"
+                      src="./images/portfolio/marketing@1x_result.jpg"
                       alt="Online Courses"
                       width="360"
                       height="300"
@@ -485,7 +511,7 @@
 <!--------------------------------------#endregion section 3----------------------------------------->
       </main>
 <!--------------------------------------#region footer------------------------------------------------>
-      <footer class="boden hide">
+      <footer class="boden">
         <div class="container">
           <div class="logo-footer-area">
             <a class="logo-footer" href="./index.html"
@@ -610,7 +636,6 @@
       
         </div>
       </div>
-    </div>
     <script src="./js/menu.js"></script>
   </body>
 </html>
