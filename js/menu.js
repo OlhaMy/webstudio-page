@@ -1,8 +1,9 @@
 const menuBtns = document.querySelectorAll ('.js-menu-btn');
-const menuEl = document.querySelector ('.menu-header');
+const menuEl = document.querySelector ('.mobile_menu');
 
-menuBtns.forEach(btn => {
-    btn.addEventListenet('click', event => {
+menuBtns.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
         menuEl.classList.toggle('is-open');
     });
 });
+
