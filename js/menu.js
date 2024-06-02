@@ -7,3 +7,10 @@ menuBtns.forEach((btn) => {
     });
 });
 
+
+const backdrop = document.getElementById('backdrop')
+const closeButton = document.getElementById('closeButton');
+
+closeButton.addEventListener('click', () => {
+    backdrop.classList.remove('is-open');
+});
